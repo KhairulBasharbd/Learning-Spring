@@ -5,13 +5,13 @@ import com.in28minutes.learn_spring.game.MarioGame;
 import com.in28minutes.learn_spring.game.PacManGame;
 import com.in28minutes.learn_spring.game.SuperContraGame;
 
-public class AppGameBasicJava {
+public class App01GameBasicJava {
 
 	public static void main(String[] args) {
 
-		var game = new MarioGame();
+		//var game = new MarioGame();
 		//var game = new SuperContraGame();
-		//var game = new PacManGame();
+		var game = new PacManGame();
 		
 		
 		var gameRunner = new GameRunner(game);
