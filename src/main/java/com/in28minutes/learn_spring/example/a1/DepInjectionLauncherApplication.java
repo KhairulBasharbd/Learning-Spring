@@ -70,8 +70,8 @@ public class DepInjectionLauncherApplication {
 	public static void main(String[] args) {
 		try(var context = new AnnotationConfigApplicationContext(DepInjectionLauncherApplication.class)){
 			
-//			Arrays.stream(context.getBeanDefinitionNames())
-//			.forEach(System.out::println);
+			Arrays.stream(context.getBeanDefinitionNames())
+			.forEach(System.out::println);
 
 			System.out.println(context.getBean(YourBusinessClass.class).xyz());
 		}
