@@ -21,9 +21,9 @@ public class GamingAppLauncherApplication {
 			
 			//context.getBean("game") returns an Object type by default, and the Object class does not have an up() method. 
 			//To call the up() method directly, you need to cast the bean to the GameRunner type
-			((GameRunner)context.getBean("gameRunner")).run();
+			//((GameRunner)context.getBean("gameRunner")).run();
 			
-			//context.getBean(GameRunner.class).run();
+			context.getBean(GameRunner.class).run();
 			
 		}
 		
