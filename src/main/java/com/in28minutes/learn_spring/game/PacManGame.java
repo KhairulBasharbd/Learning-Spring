@@ -1,5 +1,7 @@
 package com.in28minutes.learn_spring.game;
 
+
+//@Component
 public class PacManGame implements GamingConsole{
 	public void up() {
 		System.out.println("up..");
