@@ -12,22 +12,20 @@ import com.in28minutes.learn_spring.game.GamingConsole;
 @Configuration
 @ComponentScan("com.in28minutes.learn_spring.game")
 
-public class App03GamingSpringBeans {
+public class GamingAppLauncherApplication {
 
 	public static void main(String[] args) {
-		try(var context = new AnnotationConfigApplicationContext(App03GamingSpringBeans.class)){
+		try(var context = new AnnotationConfigApplicationContext(GamingAppLauncherApplication.class)){
 			
-			context.getBean(GamingConsole.class).up();
+			context.getBean(GamingConsole.class).down();
 			
 			//context.getBean("game") returns an Object type by default, and the Object class does not have an up() method. 
 			//To call the up() method directly, you need to cast the bean to the GameRunner type
-			//((GameRunner)context.getBean("gamerunner")).run();
+			((GameRunner)context.getBean("gameRunner")).run();
 			
-			context.getBean(GameRunner.class).run();
+			//context.getBean(GameRunner.class).run();
 			
 		}
-		
-		
 		
 	}
 
